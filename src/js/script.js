@@ -37,14 +37,14 @@ const existeSolucionRC = ()=>{
    
     if(solucionRC1() && solucionRC2()) {
         raices.insertAdjacentElement("beforebegin",p)
-        p.innerHTML="Las raices de la ecuación son:"
+        p.innerHTML="The roots of the equation are:"
         p.classList.remove("none")
         raices.classList.remove("none")
         resultOne.value = solucionRC1().toFixed(1)
         resultTwo.value = solucionRC2().toFixed(1) 
        return 1
     }else {
-        p.innerHTML="La ecuación no tiene raices"
+        p.innerHTML="The equation has no roots"
         p.classList.remove("none")
         raices.classList.add("none")
        return 0 
