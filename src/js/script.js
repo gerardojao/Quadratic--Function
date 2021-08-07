@@ -9,7 +9,9 @@ resultTwo = d.getElementById("result2"),
 btnCanc = d.getElementById("cancel"),
 form = d.querySelector(".form"),
 raices=d.querySelector(".raices"),
-text = d.querySelector(".error")
+text = d.querySelector(".error"),
+variable = d.querySelector(".variable"),
+variableResultado = d.querySelector(".variableResultado")
 
 let p = d.createElement("P")
 p.classList.add("error","none")
@@ -34,6 +36,8 @@ const solucionRC2 = ()=>{
 
 
 const existeSolucionRC = ()=>{
+     variable.classList.add("hide")
+     variableResultado.classList.remove("hide")
    
     if(solucionRC1() && solucionRC2()) {
         raices.insertAdjacentElement("beforebegin",p)
@@ -57,7 +61,9 @@ const existeSolucionRC = ()=>{
 btnCalc.addEventListener("click",existeSolucionRC)     
 
 btnCanc.addEventListener("click",()=>{
-   
+    variable.classList.remove("hide")
+    variableResultado.classList.add("hide")   
+
     resultOne.value=" "
     resultTwo.value=" "
     

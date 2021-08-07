@@ -25,7 +25,8 @@ body{
     flex-direction: column;
     border:2px solid black;
     width: 400px;
-    height: 80vh;
+    min-height: 470px;
+    max-height:80vh;
     border-radius:15px;
     border-top: 25px solid black;
     margin-top:50px;
@@ -39,12 +40,23 @@ width: 100%;
 flex-direction: column;
 justify-content: center;
 align-items:center;
-;
 height: 50%;
 position: relative;
 border-top:.5px solid rgb(140, 134, 134);
 
 }
+.variableResultado{
+   
+    display:flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    height: 50%;
+    position: relative;
+    border-top:.5px solid rgb(140, 134, 134);
+    
+    }
 .title{
     color:blue;
     position: absolute;
@@ -124,3 +136,11 @@ margin-right:auto;
     align-items: center;
  
 }
+@media (max-width: 414px) { 
+    .variable,.variableResultado{
+        height:100vh
+    }
+    .hide{
+        display:none;
+    }
+ }
